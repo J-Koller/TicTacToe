@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="signin-box" (keyup.enter)="onSignIn()">
+    <h2>Tic-Tac-Toe Online!</h2>
+    <div class="form-group">
+      <label>Username:</label>
+      <input type="text" [(ngModel)]="username"/>
+    </div>
+    <div class="form-group">
+      <label>Password:</label>
+      <input type="text" [(ngModel)]="password"/>
+    </div>
+    <div class="error-label">
+      <label>{{errorMessage}}</label>
+    </div>
+    <div class="form-group">
+      <button class="login" (click)="onSignIn()" [disabled]="buttonLocked">Sign in</button>
+    </div>
+    <div class="form-group">
+      <button class="register" (click)="onRegister()" [disabled]="buttonLocked">Register</button>
+    </div>
+    <div class="form-group">
+      <button class="download" (click)="onDownload()" [disabled]="buttonLocked">Download Desktop App!</button>
+    </div>
+  </div>
+</div>

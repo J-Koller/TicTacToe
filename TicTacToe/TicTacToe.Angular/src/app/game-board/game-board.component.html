@@ -1,0 +1,15 @@
+<div class="game-board">
+  <div class="opponent-label">
+    <pre>{{ opponentInfo }}</pre>
+  </div>
+  <div class="grid">
+    <button
+      *ngFor="let button of buttons"
+      class="grid-button"
+      [disabled]="button.disabled"
+    ></button>
+  </div>
+  <div class="turn-label">
+    {{ turnInfo }}
+  </div>
+</div>

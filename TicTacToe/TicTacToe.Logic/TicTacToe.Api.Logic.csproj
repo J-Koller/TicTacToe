@@ -2,8 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TicTacToe.Data\TicTacToe.Api.Data.csproj" />
+    <ProjectReference Include="..\TicTacToe.Shared\TicTacToe.Api.Shared.csproj" />
+  </ItemGroup>
 
 </Project>

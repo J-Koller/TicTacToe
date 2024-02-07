@@ -1,0 +1,49 @@
+.game-board {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 55px;
+  padding: 20px;
+}
+
+.grid-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(64,64,64);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.grid-button:hover {
+  background-color: #dcdcdc;
+}
+
+.turn-label {
+  color: rgb(128,255,255); 
+  font-size: 22px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
+}
+
+.opponent-label {
+  color: rgb(255,128,128);
+  font-size: 22px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  top: -60px;
+}

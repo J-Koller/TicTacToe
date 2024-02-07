@@ -1,0 +1,12 @@
+{
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": ["/images/*.{png,jpg,gif,ico}", "/*.{css,scss,js}"]
+  },
+  "routes": [
+    { "route": "/signin", "redirect": "" },
+    { "route": "/register", "redirect": "" },
+    { "route": "/main", "redirect": "" },
+    { "route": "/*", "redirect": "" }
+  ]
+}

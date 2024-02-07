@@ -1,0 +1,50 @@
+<div class="main-container">
+  <div class="menu-container">
+    <div class="sidebar">
+      <div class="textbox">
+        <label>Username:</label>
+        <div class="display">{{ menuService.username }}</div>
+      </div>
+      <div class="textbox">
+        <label>Rank:</label>
+        <div class="display">{{ menuService.rank }}</div>
+      </div>
+      <div class="textbox">
+        <label>Games Played:</label>
+        <div class="display">{{ menuService.gamesPlayed }}</div>
+      </div>
+      <div class="textbox">
+        <label>Games Won:</label>
+        <div class="display">{{ menuService.gamesWon }}</div>
+      </div>
+      <div class="textbox">
+        <label>Games Lost:</label>
+        <div class="display">{{ menuService.gamesLost }}</div>
+      </div>
+      <div class="textbox">
+        <label>Games Tied:</label>
+        <div class="display">{{ menuService.gamesTied }}</div>
+      </div>
+      <button class="sidebar-button" (click)="onNewGameClick()" [disabled]="menuService.menuButtonsDisabled">New Game</button>
+      <button class="sidebar-button" (click)='onFindGameClick()' [disabled]="menuService.menuButtonsDisabled">Find Game</button>
+      <button class="sidebar-button"(click)='onLogOutClick()' [disabled]="menuService.menuButtonsDisabled">Log Out</button>
+    </div>
+  </div>
+  <div class="game-board-container">
+    <div class="game-board">
+      <div class="opponent-label" [ngStyle]="{'color': gameBoardService.opponentLabelColor}">
+        <pre>{{ gameBoardService.opponentLabelText }}</pre>
+      </div>
+      <div class="grid">
+        <button *ngFor="let button of gameBoardService.buttons" class="grid-button" [disabled]="button.disabled"
+          [ngStyle]="{'color': button.value == 'X' ? 'rgb(128,255,255)' : 'rgb(255,128,128)', 'border': gameBoardService.getBorderColor(button)}"
+          (click)="onButtonClick(button)">
+          {{button.value}}
+        </button>
+      </div>
+      <div class="turn-label" [ngStyle]="{'color': gameBoardService.beRed ? gameBoardService.red : gameBoardService.blue}">
+        {{ gameBoardService.turnLabelText }}
+      </div>
+    </div>
+  </div>
+</div>
